@@ -56,70 +56,77 @@ public class PageHome extends PageBase {
 	@FindBy(linkText = "Bootstrap Date Picker")
 	private WebElement bootstrapDatePicker;
 
+	public void accessInputForms() throws InterruptedException {
+		refuseAlertLearnSelenium();
+		Thread.sleep(2000);
+		waitForElement(inputForms);
+		click(inputForms);
+	}
 
-	public void refuseAlertLearnSelenium(){
+	public void accessTable() throws InterruptedException {
+		Thread.sleep(1000);
+		refuseAlertLearnSelenium();
+		waitForElement(table);
+		click(table);
+	}
+
+	public void accessDatePickers() throws InterruptedException {
+		Thread.sleep(1000);
+		refuseAlertLearnSelenium();
+		waitForElement(datePickers);
+		click(datePickers);
+	}
+
+	public void refuseAlertLearnSelenium() throws InterruptedException {
+		Thread.sleep(10000);
 		if(isVisibility(alertLearnSelenium)){
 			click(buttonNoThanks);
 		}
 	}
 
 	public void accessSimpleFormDemo() throws InterruptedException {
-		Thread.sleep(2000);
-		refuseAlertLearnSelenium();
-		click(inputForms);
+		accessInputForms();
 		waitForElement(simpleFormDemo);
 		click(simpleFormDemo);
 		Log.info("Acessando página SimpleFormDemo");
 	}
 
 	public void acessarCheckBoxDemo() throws InterruptedException {
-		Thread.sleep(2000);
-		refuseAlertLearnSelenium();
-		click(inputForms);
-		waitForElement(checkBoxDemo);
+		accessInputForms();
+		Thread.sleep(1000);
 		click(checkBoxDemo);
 		Log.info("Acessando página CheckBoxDemo");
 	}
 
 	public void acessarRadioButtonsDemo() throws InterruptedException {
-		Thread.sleep(2000);
-		refuseAlertLearnSelenium();
-		click(inputForms);
+		accessInputForms();
 		waitForElement(radioButtonsDemo);
 		click(radioButtonsDemo);
 		Log.info("Acessando página RadioButtonsDemo");
 	}
 
 	public void acessarSelectDropdownList() throws InterruptedException {
-		Thread.sleep(2000);
-		refuseAlertLearnSelenium();
-		click(inputForms);
+		accessInputForms();
 		waitForElement(selectDropdownList);
 		click(selectDropdownList);
 		Log.info("Acessando página SelectDropdown List");
 	}
 
 	public void acessarAjaxFormSubmit() throws InterruptedException {
-		Thread.sleep(2000);
-		refuseAlertLearnSelenium();
-		click(inputForms);
+		accessInputForms();
 		waitForElement(ajaxFormSubmit);
 		click(ajaxFormSubmit);
 		Log.info("Acessando página Ajax Form Submit");
 	}
 
 	public void acessarTableDataSearch() throws InterruptedException {
-		Thread.sleep(2000);
-		refuseAlertLearnSelenium();
-		click(table);
+		accessTable();
 		waitForElement(tableDataSearch);
 		click(tableDataSearch);
 	}
 
 	public void acessarBootstrapDatePicker() throws InterruptedException {
-		Thread.sleep(2000);
-		refuseAlertLearnSelenium();
-		click(datePickers);
+		accessDatePickers();
 		waitForElement(bootstrapDatePicker);
 		click(bootstrapDatePicker);
 	}
