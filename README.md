@@ -1,7 +1,7 @@
-<h1 align="center">Welcome to teste-verity 👋</h1>
+<h1 align="center">Welcome to SeleniumEasyTest 2.0 👋</h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
-  <a href="https://www.verity.com.br/" target="_blank">
+  <img alt="Version" src="https://img.shields.io/badge/version-2.0.0-blue.svg?cacheSeconds=2592000" />
+  <a href="https://www.seleniumeasy.com/test/" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
   </a>
   <a href="https://twitter.com/JuuhGranja" target="_blank">
@@ -9,12 +9,12 @@
   </a>
 </p>
 
-> Projeto maven criado para testar funcionalidades do site [Verity](https://www.verity.com.br/).
-> Ferrramentas utilizadas: Selenium Web Driver, JUnit, Cucumber, Selenium Grid, e Jenkins.
+> Java Project in order to test the Selenium Easy website [SeleniumEasy](https://www.seleniumeasy.com/test/).
+> Frameworks and tools: Maven, Selenium Web Driver, JUnit, Cucumber, Selenium Grid, e Jenkins.
 
-### 🏠 [Verity](https://www.verity.com.br/)
+### 🏠 [SeleniumEasy](https://www.seleniumeasy.com/test/)
 
-* Documentação do Jenkins: [Jenkins](https://www.jenkins.io/doc/tutorials/build-a-java-app-with-maven)
+* Jenkins documentation: [Jenkins](https://www.jenkins.io/doc/tutorials/build-a-java-app-with-maven)
 
 ## Instruções de Uso
    
@@ -24,7 +24,7 @@ por isso, caso o seu navegador esteja em outra versão por favor altere o driver
 
 - A execução pode ser realizada localmente ou dentro de um grid,
 Caso prefira executar em um grid, favor alterar o arquivo de propriedades (config.properties)
-setando a url do grid que deseja utilizar, e alterando o navegador para cremote
+setando a url do grid que deseja utilizar, e alterando o navegador para "cremote"
 ```
 
 ## Run tests
