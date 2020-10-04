@@ -32,7 +32,8 @@ public class PageAjaxFormSubmit extends PageBase {
         assertEquals("Selenium Easy - Ajax Form submit demo for automation", driver.getTitle());
     }
 
-    public void inputName(String name){
+    public void inputName(String name) throws InterruptedException {
+        Thread.sleep(1000);
         writeInField(inputName, name);
         Log.info("Nome inserido");
 

@@ -23,7 +23,7 @@ public class AjaxFormSubmitSteps {
     }
 
     @When("filling in the name field {string}")
-    public void filling_in_the_name_field(String string) {
+    public void filling_in_the_name_field(String string) throws InterruptedException {
         pageAjaxFormSubmit.inputName(string);
     }
 
