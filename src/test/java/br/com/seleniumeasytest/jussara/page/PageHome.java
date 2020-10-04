@@ -64,7 +64,7 @@ public class PageHome extends PageBase {
 	}
 
 	public void accessSimpleFormDemo() throws InterruptedException {
-		Thread.sleep(10000);
+		Thread.sleep(2000);
 		refuseAlertLearnSelenium();
 		click(inputForms);
 		waitForElement(simpleFormDemo);
@@ -72,7 +72,8 @@ public class PageHome extends PageBase {
 		Log.info("Acessando página SimpleFormDemo");
 	}
 
-	public void acessarCheckBoxDemo(){
+	public void acessarCheckBoxDemo() throws InterruptedException {
+		Thread.sleep(2000);
 		refuseAlertLearnSelenium();
 		click(inputForms);
 		waitForElement(checkBoxDemo);
@@ -80,7 +81,8 @@ public class PageHome extends PageBase {
 		Log.info("Acessando página CheckBoxDemo");
 	}
 
-	public void acessarRadioButtonsDemo(){
+	public void acessarRadioButtonsDemo() throws InterruptedException {
+		Thread.sleep(2000);
 		refuseAlertLearnSelenium();
 		click(inputForms);
 		waitForElement(radioButtonsDemo);
@@ -88,7 +90,8 @@ public class PageHome extends PageBase {
 		Log.info("Acessando página RadioButtonsDemo");
 	}
 
-	public void acessarSelectDropdownList(){
+	public void acessarSelectDropdownList() throws InterruptedException {
+		Thread.sleep(2000);
 		refuseAlertLearnSelenium();
 		click(inputForms);
 		waitForElement(selectDropdownList);
@@ -96,7 +99,8 @@ public class PageHome extends PageBase {
 		Log.info("Acessando página SelectDropdown List");
 	}
 
-	public void acessarAjaxFormSubmit(){
+	public void acessarAjaxFormSubmit() throws InterruptedException {
+		Thread.sleep(2000);
 		refuseAlertLearnSelenium();
 		click(inputForms);
 		waitForElement(ajaxFormSubmit);
@@ -104,14 +108,16 @@ public class PageHome extends PageBase {
 		Log.info("Acessando página Ajax Form Submit");
 	}
 
-	public void acessarTableDataSearch(){
+	public void acessarTableDataSearch() throws InterruptedException {
+		Thread.sleep(2000);
 		refuseAlertLearnSelenium();
 		click(table);
 		waitForElement(tableDataSearch);
 		click(tableDataSearch);
 	}
 
-	public void acessarBootstrapDatePicker(){
+	public void acessarBootstrapDatePicker() throws InterruptedException {
+		Thread.sleep(2000);
 		refuseAlertLearnSelenium();
 		click(datePickers);
 		waitForElement(bootstrapDatePicker);

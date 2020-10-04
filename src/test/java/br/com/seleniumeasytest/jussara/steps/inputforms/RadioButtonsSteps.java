@@ -17,7 +17,7 @@ public class RadioButtonsSteps {
     PageRadioButtons pageRadioButtons = new PageRadioButtons();
 
     @Given("the page Radio Buttons is visible")
-    public void the_page_radio_buttons_is_visible() {
+    public void the_page_radio_buttons_is_visible() throws InterruptedException {
         homeSeleniumEasy.acessarRadioButtonsDemo();
         pageRadioButtons.assertPageRadioButtons();
     }

@@ -17,7 +17,7 @@ public class DatePickersSteps {
     PageBootstrapDatePicker pageBootstrapDatePicker = new PageBootstrapDatePicker();
 
     @Given("the page Date Pickers is visible")
-    public void the_page_date_pickers_is_visible() {
+    public void the_page_date_pickers_is_visible() throws InterruptedException {
         homeSeleniumEasy.acessarBootstrapDatePicker();
         pageBootstrapDatePicker.assertPageBootstrapDatePickers();
     }

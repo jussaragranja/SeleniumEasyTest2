@@ -1,4 +1,4 @@
-Feature: Input Forms
+Feature: Simple Form
   Insert data into an input field
 
   Background:

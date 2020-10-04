@@ -17,7 +17,7 @@ public class SelectDropdownSteps {
     PageSelectDropdownList pageSelectDropdownList = new PageSelectDropdownList();
 
     @Given("the page Select Dropdown is visible")
-    public void the_page_select_dropdown_is_visible() {
+    public void the_page_select_dropdown_is_visible() throws InterruptedException {
         homeSeleniumEasy.acessarSelectDropdownList();
         pageSelectDropdownList.assertPageRadioButtons();
     }

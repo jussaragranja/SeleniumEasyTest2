@@ -17,7 +17,7 @@ public class TableDataSearchSteps {
     PageTableDataSearch pageTableDataSearch = new PageTableDataSearch();
 
     @Given("the page Table Data Search is visible")
-    public void the_page_table_data_search_is_visible() {
+    public void the_page_table_data_search_is_visible() throws InterruptedException {
         homeSeleniumEasy.acessarTableDataSearch();
         pageTableDataSearch.assertPageTableDataSearch();
     }

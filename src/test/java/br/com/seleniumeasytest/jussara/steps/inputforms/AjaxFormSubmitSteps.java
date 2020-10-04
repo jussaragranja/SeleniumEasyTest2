@@ -17,7 +17,7 @@ public class AjaxFormSubmitSteps {
     PageAjaxFormSubmit pageAjaxFormSubmit = new PageAjaxFormSubmit();
 
     @Given("the page Ajax Form Submit is visible")
-    public void the_page_ajax_form_submit_is_visible() {
+    public void the_page_ajax_form_submit_is_visible() throws InterruptedException {
         homeSeleniumEasy.acessarAjaxFormSubmit();
         pageAjaxFormSubmit.assertPageSimpleForm();
     }
