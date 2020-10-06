@@ -13,7 +13,6 @@ pipeline {
             post {
                 always {
                     maven 'target/surefire-reports/*.xml'
-                    cucumber  'target/cucumber-html-reports/*'
                 }
             }
         }
