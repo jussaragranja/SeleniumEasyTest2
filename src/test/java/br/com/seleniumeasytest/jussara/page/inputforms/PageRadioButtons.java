@@ -77,6 +77,7 @@ public class PageRadioButtons extends PageBase {
     }
 
     public void clickSexGroupRadioButtons(String gender){
+        waitForElement(driver.findElement(By.xpath("//input[@value='"+gender+"'][@name='gender']")));
         driver.findElement(By.xpath("//input[@value='"+gender+"'][@name='gender']")).click();
         Log.info("Sexo "+gender+" selecionado");
 

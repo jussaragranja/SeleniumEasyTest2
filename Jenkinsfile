@@ -10,6 +10,17 @@ pipeline {
             steps {
                 sh 'mvn test -DtestFailureIgnore=true' 
             }
+            post {
+                always {
+                    maven 'target/surefire-reports/*.xml'
+                    cucumber  'target/cucumber-html-reports/*'
+                }
+            }
+        }
+        stage('Deliver') {
+            steps {
+                sh './jenkins/scripts/deliver.sh'
+            }
         }
     }
 }

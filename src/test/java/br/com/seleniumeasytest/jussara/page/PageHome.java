@@ -58,7 +58,7 @@ public class PageHome extends PageBase {
 
 	public void accessInputForms() throws InterruptedException {
 		refuseAlertLearnSelenium();
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		waitForElement(inputForms);
 		click(inputForms);
 	}
