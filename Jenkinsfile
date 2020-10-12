@@ -6,7 +6,7 @@ pipeline {
         }
     }
     stages {
-        stage('Test') { 
+        stage('Test') {
             steps {
                 sh 'mvn test -Dmaven.test.failure.ignore=true'
             }
