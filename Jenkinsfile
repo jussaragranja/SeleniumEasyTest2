@@ -10,16 +10,21 @@ pipeline {
             steps {
                 sh 'mvn test -Dmaven.test.failure.ignore=true'
             }
-        }
-        stage('Reports') {
-
-            allure([
-                includeProperties: false,
-                jdk: '',
-                properties: [],
-                reportBuildPolicy: 'ALWAYS',
-                results: [[path: 'target/surefire-reports']]
-            ])
+            post {
+                always {
+                    junit 'target/surefire-reports/*.xml'
+                }
+            }
+            post {
+                always {
+                    allure results: [[path: 'build/test-results/test']]
+                    deleteDir()
+                }
+                failure {
+                    slackSend message: "${env.JOB_NAME} - #${env.BUILD_NUMBER} failed (<${env.BUILD_URL}|Open>)",
+                            color: 'danger', teamDomain: 'qameta', channel: 'allure', tokenCredentialId: 'allure-channel'
+                }
+            }
         }
     }
 }
