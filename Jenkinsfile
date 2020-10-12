@@ -10,11 +10,16 @@ pipeline {
             steps {
                 sh 'mvn test -Dmaven.test.failure.ignore=true'
             }
-            post {
-                always {
-                    junit 'target/surefire-reports/*.xml'
-                }
-            }
+        }
+        stage('Reports') {
+
+            allure([
+                includeProperties: false,
+                jdk: '',
+                properties: [],
+                reportBuildPolicy: 'ALWAYS',
+                results: [[path: 'target/surefire-reports']]
+            ])
         }
     }
 }
