@@ -11,5 +11,18 @@ pipeline {
                 sh 'mvn test -Dmaven.test.failure.ignore=true'
             }
         }
+        stage('reports') {
+    		steps {
+    			script {
+            		allure([
+                    	includeProperties: false,
+                    	jdk: '',
+                    	properties: [],
+                    	reportBuildPolicy: 'ALWAYS',
+                    	results: [[path: 'target/allure-results']]
+            		])
+    			}
+    		}
+		}
     }
 }
