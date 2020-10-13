@@ -11,11 +11,16 @@ pipeline {
                 sh 'mvn test -Dmaven.test.failure.ignore=true'
             }
         }
-    }
-    post {
-        always {
-            allure results: [[path: 'target/surefire-reports']]
-            deleteDir()
-        }
+        stage('reports') {
+    		steps {
+            		allure([
+                    	includeProperties: false,
+                    	jdk: '',
+                    	properties: [],
+                    	reportBuildPolicy: 'ALWAYS',
+                    	results: [[path: 'target/surefire-reports']]
+            		])
+    		}
+		}
     }
 }
