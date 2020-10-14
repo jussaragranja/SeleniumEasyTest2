@@ -7,7 +7,7 @@
 </p>
 
 > Java Project in order to test the Selenium Easy website [SeleniumEasy](https://www.seleniumeasy.com/test/).
-> Frameworks and tools: Maven, Selenium Web Driver, JUnit, Cucumber, Selenium Grid, e Jenkins.
+> Frameworks and tools: Maven, Selenium Web Driver, JUnit, Cucumber, Selenium Grid, Jenkins e Allure.
 
 ### 🏠 [SeleniumEasy](https://www.seleniumeasy.com/test/)
 
