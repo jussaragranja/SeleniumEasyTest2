@@ -12,15 +12,13 @@ pipeline {
             }
         }
         stage('reports') {
-    		steps {
-            		allure([
-                    	includeProperties: false,
-                    	jdk: '',
-                    	properties: [],
-                    	reportBuildPolicy: 'ALWAYS',
-                    	results: [[path: 'target/surefire-reports']]
-            		])
-    		}
+                allure([
+                    includeProperties: false,
+                    jdk: '',
+                    properties: [],
+                    reportBuildPolicy: 'ALWAYS',
+                    results: [[path: 'target/surefire-reports']]
+            	])
 		}
     }
 }
