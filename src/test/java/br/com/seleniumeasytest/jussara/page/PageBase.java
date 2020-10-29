@@ -1,14 +1,14 @@
 package br.com.seleniumeasytest.jussara.page;
 
 import br.com.seleniumeasytest.jussara.support.Driver;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriverException;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.Assert.fail;
 
@@ -19,7 +19,7 @@ import static org.junit.Assert.fail;
 
 public class PageBase {
 
-    private static final int LOAD_TIMEOUT = 60;
+    private static final int LOAD_TIMEOUT = 500;
 
     public PageBase(){
 		PageFactory.initElements(Driver.driver, this);
@@ -80,6 +80,34 @@ public class PageBase {
         } catch (NoSuchElementException e){
             fail("Erro ao selecionar no elemento: ["+element.getTagName()+ "] com o o valor: "+valueVisibel);
         }
+    }
+
+    public List<WebElement> getTableCompleta(WebElement table){
+
+        List<WebElement> tr;
+        tr = table.findElements(By.cssSelector("tr"));
+
+        return tr;
+    }
+
+    public List<List<WebElement>> getTable(WebElement table) {
+
+        waitForElement(table);
+
+        List<WebElement> tr = table.findElements(By.cssSelector("tr"));
+        List<List<WebElement>> tabela = new ArrayList<List<WebElement>>();
+
+        tr.forEach(linhas -> {
+
+            List<WebElement> celulas = linhas.findElements(By.cssSelector("td"));
+            List<WebElement> linha = new ArrayList<WebElement>();
+
+            linha.addAll(celulas);
+            tabela.add(linha);
+
+        });
+
+        return tabela;
     }
 
 

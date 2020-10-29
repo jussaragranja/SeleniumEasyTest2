@@ -38,6 +38,9 @@ public class PageHome extends PageBase {
 	@FindBy(linkText="Ajax Form Submit")
 	private WebElement ajaxFormSubmit;
 
+	@FindBy(linkText="Table Sort & Search")
+	private WebElement tableSortAndSearch;
+
 	@FindBy(linkText="JQuery Select dropdown")
 	private WebElement jQuerySelectDropdown;
 
@@ -130,4 +133,12 @@ public class PageHome extends PageBase {
 		waitForElement(bootstrapDatePicker);
 		click(bootstrapDatePicker);
 	}
+
+	public void acessarTableSortAndSearch() throws InterruptedException {
+		accessTable();
+		waitForElement(tableSortAndSearch);
+		click(tableSortAndSearch);
+		Log.info("Acessando página Table Sort And Search");
+	}
+
 }
