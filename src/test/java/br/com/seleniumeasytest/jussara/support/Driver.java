@@ -52,13 +52,20 @@ public class Driver {
 				.indexOf("aix") > 0);
 	}
 
+	public static boolean isMac(){
+		return (OS.indexOf("mac") >= 0);
+	}
+
 	//Buscar arquivo do driver
 	public static File getFileDriverPathChrome() throws Exception{
 		File file = null;
 		if(isWindows()){
 			file = new File(Property.CHROME_DRIVE_PATH);
-		}else if(isUnix()){
+		}else if(isUnix()) {
 			file = new File(Property.CHROME_DRIVE_LINUX_PATH);
+		}
+		else if(isMac()){
+			file = new File(Property.CHROME_DRIVE_MAC_PATH);
 		}else
 			throw new Exception("Sistema operacional nao compativel");
 		return file;

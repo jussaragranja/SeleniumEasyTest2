@@ -14,6 +14,7 @@ public abstract class Property {
 
 	public static String CHROME_DRIVE_PATH;
 	public static String CHROME_DRIVE_LINUX_PATH;
+	public static String CHROME_DRIVE_MAC_PATH;
 	public static String BROWSER_NAME;
 	public static String URL;
 	public static String GRIDURL;
@@ -36,6 +37,7 @@ public abstract class Property {
 		Properties properties 					= getConfig();
 		CHROME_DRIVE_PATH 						= new File("").getAbsolutePath() + SRC_SELENIUM + "driver/windows/chromedriver.exe";
 		CHROME_DRIVE_LINUX_PATH 				= new File("").getAbsolutePath() + SRC_SELENIUM + "driver/linux/chromedriver";
+		CHROME_DRIVE_MAC_PATH 					= new File("").getAbsolutePath() + SRC_SELENIUM + "driver/mac/chromedriver";
 		BROWSER_NAME 							= properties.getProperty("browser.name");
 		URL										= properties.getProperty("url");
 		GRIDURL									= properties.getProperty("gridurl");
