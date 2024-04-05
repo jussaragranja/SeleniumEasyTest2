@@ -6,10 +6,10 @@
   </a>
 </p>
 
-> Java Project in order to test the Selenium Easy website [SeleniumEasy](https://www.seleniumeasy.com/test/).
+> Java Project in order to test the Selenium Easy website [SeleniumEasy](https://demo.seleniumeasy.com/).
 > Frameworks and tools: Maven, Selenium Web Driver, JUnit, Cucumber, Selenium Grid, Jenkins e Allure.
 
-### 🏠 [SeleniumEasy](https://www.seleniumeasy.com/test/)
+### 🏠 [SeleniumEasy](https://demo.seleniumeasy.com/)
 
 * Jenkins documentation: [Jenkins](https://www.jenkins.io/doc/tutorials/build-a-java-app-with-maven)
 

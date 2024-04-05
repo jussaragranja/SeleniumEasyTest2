@@ -61,7 +61,7 @@ public class Driver {
 		File file = null;
 		if(isWindows()){
 			file = new File(Property.CHROME_DRIVE_PATH);
-		}else if(isUnix()) {
+		}else if(isUnix()){
 			file = new File(Property.CHROME_DRIVE_LINUX_PATH);
 		}
 		else if(isMac()){
