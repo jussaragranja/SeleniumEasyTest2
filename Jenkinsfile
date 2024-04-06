@@ -2,7 +2,7 @@ node {
     def mvnHome
     stage('Git') {
         git 'https://github.com/jussaragranja/SeleniumEasyTest2.git'
-        mvnHome = tool 'M3'
+        mvnHome = tool 'Maven'
     }
     stage('Test') {
         withEnv(["MVN_HOME=$mvnHome"]) {
