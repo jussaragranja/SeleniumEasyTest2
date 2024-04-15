@@ -6,7 +6,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/test/resources/features/inputforms/simpleform.feature",
+        features = "src/test/resources/features/",
         monochrome = true,
         dryRun = false,
         glue = "",

@@ -26,10 +26,10 @@ public class PageSimpleFormDemo extends PageBase {
 	@FindBy(id = "display")
 	private WebElement labelTextoSuaMsg;
 
-	@FindBy(id = "sum1")
+	@FindBy(id = "value1")
 	private WebElement inputEnterNumberA;
 
-	@FindBy(id = "sum2")
+	@FindBy(id = "value2")
 	private WebElement inputEnterNumberB;
 
 	@FindBy(xpath ="//button[@onclick='return total()']")
