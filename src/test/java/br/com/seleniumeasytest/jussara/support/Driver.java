@@ -27,6 +27,7 @@ public class Driver {
 					System.setProperty("webdriver.chrome.driver", getFileDriverPathChrome().getAbsolutePath());
 					driver = new ChromeDriver();
 					driver.manage().window().maximize();
+
 				}
 
 				if(Browser.REMOTECHROME.equals(Property.BROWSER_NAME)){
