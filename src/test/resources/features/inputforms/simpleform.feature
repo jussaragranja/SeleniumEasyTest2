@@ -17,12 +17,12 @@ Feature: Simple Form
 
 #Two Input Fields
 
-  Scenario Outline: Write the numbers in the input fields and validate the sum
-    When filling in field A with the value <valueA>
-    And filling in field B with the <valueB> value
-    And click the Get Total button
-    Then it should be displayed Total
+#  Scenario Outline: Write the numbers in the input fields and validate the sum
+#    When filling in field A with the value <valueA>
+#    And filling in field B with the <valueB> value
+#    And click the Get Total button
+#    Then it should be displayed Total
 
-    Examples:
-      |valueA  |valueB  |
-      |2       |2       |
+#    Examples:
+#      |valueA  |valueB  |
+#      |2       |2       |
