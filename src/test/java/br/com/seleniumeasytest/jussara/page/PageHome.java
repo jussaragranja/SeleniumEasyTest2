@@ -96,7 +96,7 @@ public class PageHome extends PageBase {
 
 	public void acessarCheckBoxDemo() throws InterruptedException {
 		accessInputForms();
-		Thread.sleep(1000);
+		Thread.sleep(5000);
 		click(checkBoxDemo);
 		Log.info("Acessando página CheckBoxDemo");
 	}

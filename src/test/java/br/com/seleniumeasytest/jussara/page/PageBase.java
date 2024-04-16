@@ -7,6 +7,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,7 +28,7 @@ public class PageBase {
 
     public void waitForElement(WebElement element){
         try {
-            WebDriverWait driverWait = new WebDriverWait(Driver.driver, LOAD_TIMEOUT);
+            WebDriverWait driverWait = new WebDriverWait(Driver.driver, Duration.ofSeconds(5));
             driverWait.until(ExpectedConditions.visibilityOf(element));
         } catch (Exception e) {
             fail("Tempo excedido para aguardar elemento: "+element);
